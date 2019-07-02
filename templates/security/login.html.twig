@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title 'Se connecter' %}
+{% block body %}
+
+    <div class="container">
+        <form action="{{path('login')}}" method="post">
+            <div class="form-group">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="_username" class="form_control">
+            </div>
+            <div class="form-group">
+                <label for="username">Mot de passe</label>
+                <input type="password" id="password" name="_password" class="form_control">
+            </div>
+            <input type="submit" value="Se connecter" class="btn btn-primary">
+        </form>
+    </div>
+{% endblock %}
