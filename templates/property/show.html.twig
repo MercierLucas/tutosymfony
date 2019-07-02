@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block title 'Nos biens' %}
+{% block body %}
+    <div class="jumbotron">
+            <h1 class="text-center"> {{property.title}} </h1>
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    
+                    <H2> {{property.rooms}} pièces</H2>
+                    <H2> {{property.surface}} m²</H2>
+                    <div class="text-primary">{{property.price | number_format(0, '', ' ')}} €</div>
+                    <a href="" class="btn btn-primary">Contacter l'agence</a>    
+                </div>
+            </div>
+    </div>
+    <div class="container text-center mt-4">
+
+        <nav class="nav nav-tabs mb-4" id="tab">
+            
+            <div class="row">
+                <p>{{property.description | nl2br}}</p>
+                <div class="col-md-4"></div>
+                    <table class="table table-stripped">
+                        <tr>
+                            <td>Surface habitable</td>
+                            <td>{{property.surface}}</td>
+                        </tr>
+                        <tr>
+                            <td>Pièces</td>
+                            <td>{{property.rooms}}</td>
+                        </tr>
+                        <tr>
+                            <td>Chambres</td>
+                            <td>{{property.bedrooms}}</td>
+                        </tr>
+                        <tr>
+                            <td>Etage</td>
+                            <td>{{property.floor}}</td>
+                        </tr>
+                    </table>
+                <div class="col-md-4"></div>
+            </div>
+            </nav>
+    </div>
+
+
+
+{% endblock %}
